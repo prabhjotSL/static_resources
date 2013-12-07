@@ -1,0 +1,171 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@icon-font-path: "../fonts/glyphicons/";
+
+@import "../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path: "../fonts/font-awesome";
+
+@import "common.less";
+@import "single_post.less";
+
+@mm-padding:          50px 0px 0px 0px;
+@mm-padding-bottom:   50px;
+@mm-padding-top: 	  50px;
+@mm-border-radius: 				  4px;
+@mm-border-color:                 #ccc;
+
+body {
+	background-image: url("../images/bg-image.png");
+	background-repeat: no-repeat;
+}
+
+.browsehappy {
+  margin: 0.2em 0; 
+  background: #ccc; 
+  color: #000; 
+  padding: 0.2em 0; 
+}
+
+.mm-head {
+	padding-bottom: @mm-padding-bottom;
+	padding-top: @mm-padding-top;
+}
+
+.mm-stamp {
+	position: absolute;
+	top: -85px;
+}
+
+.mm-body {
+	background-image: url("../images/tile-pattern.png");
+	background-repeat: repeat;
+	background-color: transparent;
+	padding: @mm-padding;
+	padding-bottom: @mm-padding-bottom;
+}
+
+.mm-post {
+
+	.mm-post-summary {
+		padding: 10px;
+		margin-bottom: 35px;
+		border-radius: @mm-border-radius;
+		border: 1px solid @mm-border-color;
+		color: #666;
+		background: #fff;
+		z-index: -100;
+		
+		.header {
+
+			h2 {
+				padding-left: 5px;
+			}
+
+			.mm-date-ribbon {
+				position: absolute;
+				top: -21px;
+				right: 22px;
+				z-index: 1;
+			}
+
+			
+			.mm-post-day, .mm-post-month, .mm-post-year {
+				z-index: 999;
+				position: absolute;
+				color: #fff;
+			}
+
+			.mm-post-year{
+				font-size: 16px;
+				top: 52px;
+				right: 33px;
+			}
+
+			.mm-post-month {
+				font-size: 18px;
+				top: 32px;
+				right: 32px;
+			}
+
+			.mm-post-day {
+				font-size: 36px;
+				right: 31px;
+				top: -18px;
+			}
+		}
+
+		.body{
+
+			padding-bottom: 40px;
+
+			.mm-hr {
+				width: 94%;
+			}
+
+			.mm-author-share {
+				span {
+					padding-left: 6px;
+				}
+			}
+			
+			.mm-post-content {
+				padding: 7px;
+				padding-top: 10px;
+			}
+		}
+		
+		.footer {
+			position: absolute;
+			width: 47%;
+			height: auto;
+			padding-top: 20px;
+
+			.mm-post-summary-bottom {
+				
+			}
+		}
+	}
+}
+
+.mm-sidebar{
+	
+	.mm-search-box {
+		
+		.input-lg {
+			font-size: 14px;
+		}
+
+		.icon-search {
+			position: absolute;
+			top: 10px;
+			right: 25px;
+			color: #ccc;
+			font-size: 1.7em;
+		}
+
+	}
+
+	.mm-follow-us {
+		.inline-tags;
+	}
+
+	.mm-recent-posts {
+		
+	}
+
+	.mm-signup {
+		margin-top: 25px;
+	}
+
+	.mm-view-all-features {
+		margin-top: 10px;
+	}
+
+	.mm-contact-us {
+		margin-top: 10px;
+	}
+}
+
+.copyright {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
