@@ -5965,8 +5965,8 @@ td.visible-print {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/font-awesome/fontawesome-webfont.eot?v=4.0.3');
-  src: url('../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/font-awesome/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/font-awesome/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/font-awesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  src: url('http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/fontawesome-webfont.eot?v=4.0.3');
+  src: url('http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -7336,6 +7336,16 @@ td.visible-print {
   margin-top: 25px;
   color: #666;
 }
+.rss {
+  display: none;
+}
+.mm-recent-posts .panel-body ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.mm-recent-posts .panel-body ul li {
+  margin-bottom: 5px;
+}
 .tags {
   border: 1px solid #cccccc;
   border-radius: 4px;
@@ -7355,7 +7365,7 @@ td.visible-print {
   width: 40px;
 }
 body {
-  background-image: url("../images/bg-image.png");
+  background-image: url("http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/8ebbbab3.bg-image.png");
   background-repeat: no-repeat;
 }
 .browsehappy {
@@ -7373,7 +7383,7 @@ body {
   top: -85px;
 }
 .mm-body {
-  background-image: url("../images/tile-pattern.png");
+  background-image: url("http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/739b4b2d.tile-pattern.png");
   background-repeat: repeat;
   background-color: transparent;
   padding: 50px 0px 0px 0px;

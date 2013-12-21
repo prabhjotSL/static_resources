@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color:Body Background" content="#666">
+  <meta name="text:Facebook Username" content="">
+  <meta name="font:Headings" content="Helvetica, arial, sans-serif">
+  <meta name="if:Show Search Bar" content="1">
+  <meta name="image:Logo" content="">
+  <meta name="image:Official Blog" content="">
+  <meta name="image:Stamp" content="">
+  <meta name="text:Disqus Shortname" content="">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/6e0d0710.main.css">
+    <script src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/d7100892.modernizr.js"></script>
+  
+  <title>{Title}</title>
+  <style>
+  .mm-recent-posts .panel-body ul li {
+      margin-bottom: 15px;
+  }
+  {CustomCSS}
+  </style>
+
+</head>
+<body>
+<div class="container">
+  
+  <div class="mm-head">
+  <p class="rss"> <a href="{RSS}"> Subscribe to the RSS feed. </a></p>
+        <div class="row">
+          <div class="col-lg-3">
+            {block:IfLogoImage}
+      <a href="http://martmobi.com"><img class="img-responsive" src="{image:Logo}" alt="{Title}" /></a>
+      {/block:IfLogoImage}
+    
+      {block:IfNotLogoImage}
+         <!-- {Title}  Remove the image below -->
+         <a href="http://martmobi.com"><img class="img-responsive" src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/b47ea794.martmobi-logo.png"></a>
+      {/block:IfNotLogoImage}
+          </div>
+          
+          <div class="col-lg-3 col-lg-offset-6">
+            {block:IfOfficialBlogImage}
+            <img class="img-responsive" src="{image:Official Blog}" /> 
+            {/block:IfOfficialBlogImage}
+            
+            {block:IfNotOfficialBlogImage}
+                <img class="img-responsive" src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/f198dbab.official-blog-logo.png">
+            {/block:IfNotOfficialBlogImage}
+          </div>
+        </div>        
+      </div>
+      
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="http://martmobi.com/">MartMobi Home</a></li>
+            <li><a href="http://martmobi.com/aboutus">About Us</a></li>
+            <li><a href="http://martmobi.com/contactus">Contact Us</a></li>
+          </ul>
+          
+          <!-- Will have to figure out how to hide this and at what breakpoint to make this responsive -->
+          {block:IfStampImage}
+      <img class="mm-stamp" src="{image:Stamp}" /> 
+      {/block:IfStampImage}
+    
+      {block:IfNotStampImage}
+      <img class="mm-stamp" src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/46e84de7.mobi-stamp.png">
+      {/block:IfNotStampImage}
+          
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://martmobi.com/features">Features</a></li>
+            <li><a href="http://martmobi.com/howitworks">How it works?</a></li>
+            <li><a href="http://martmobi.com/pricing">Pricing</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+  
+  <div class="mm-body">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="mm-post" id="post-id">
+            
+            {block:SearchPage}
+      <h2> Search Results for "{SearchQuery}" </h2>
+      <h5> {SearchResultCount} items found. </h5>
+    {/block:SearchPage}
+    
+    {block:NoSearchResults}
+      <h5> Search for something else. </h5>
+    {/block:NoSearchResults}
+            
+            {block:Posts}
+            
+            
+            {block:Text}
+              <div class="mm-post-summary">
+                <div class="header">
+                  <div class="row">
+                    <div class="col-md-10">
+                    {block:Title}
+                        <h2><a href="{Permalink}">{Title}</a></h2>
+                        <!-- Uncomment this part after TESTING {Title} -->
+                    {/block:Title}
+                    </div>
+                    <div class="col-md-2">
+                    {block:Date}
+                      <span class="mm-post-day" id="post-id-day">{DayOfMonthWithZero}</span>
+                      <span class="mm-post-month">{ShortMonth}</span>
+                      <span class="mm-post-year">{Year}</span>
+                      <img class="mm-date-ribbon" src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/d3779f48.date-ribbon-bg.png">
+                    {/block:Date}
+                    </div>
+                  </div>
+                </div>
+                <div class="body">
+                  <hr class="mm-hr">
+                  <div class="mm-author-share">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <span>Posted By John Snow</span>
+                      </div>
+                      <div class="col-md-2 col-md-offset-2">
+                        <span>LinkedIn</span>
+                      </div>
+                      <div class="col-md-2">
+                        <span>Facebook</span>
+                      </div>
+                      <div class="col-md-2">
+                        <span>Twitter</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mm-hr">
+                  <div class="mm-post-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>{Body}</p>
+                        </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+               {/block:Text}
+                
+                {/block:Posts}
+        </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="mm-sidebar">
+              <div class="mm-search-box">
+              {block:IfShowSearchBar}
+     <form id="searchForm" action="/search" method="get">
+      <input type="text" class="form-control input-lg" value="{SearchQuery}" id="query" name="q" placeholder="Search keyword">  
+      <i onclick="submit();" class="fa fa-search icon-search"></i>
+     </form>
+    {/block:IfShowSearchBar}
+                
+              </div>
+              <div class="mm-follow-us">
+                <span>Follow us: </span>
+                <img src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/6885b9de.facebook.png">
+                <img src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/eb159c9d.twitter.png">
+                <img src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/4c410d87.linkedin.png">
+              </div>
+              <div class="mm-recent-posts">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Recent Posts</h3>
+                  </div>
+                  <div class="panel-body list-unstyled">
+                    
+                  </div>
+              </div>
+              <div class="mm-signup">
+                <a href="http://martmobi.com"><button class="btn btn-signup">Sign Up for FREE Trial</button></a>
+              </div>
+              <div class="mm-view-all-features">
+                <a href="http://martmobi.com/features"><button class="btn btn-mm-others">View all Features</button></a>
+              </div>
+              <div class="mm-contact-us">
+                <a href="http://martmobi.com/contactus"><button class="btn btn-mm-others">Contact Us</button></a>
+              </div>
+            </div>
+          </div> <!-- col-md-4 -->
+         </div> <!-- row -->
+      </div> <!--  mm_body -->
+      
+      <footer>
+        <p class="text-center copyright">&copy; 2012-2013 MARTMOBI OFFICIAL BLOG</p>
+      </footer>
+    </div> <!-- Container -->
+
+  {block:IfDisqusShortname}
+
+  <script>var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+
+  {block:Permalink}
+  <div id="disqus_thread"></div>
+  <script>
+
+    //var disqus_identifier = 'rockable_';
+    (function() {
+       var dsq = document.createElement('script'); 
+         dsq.async = true;
+           dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <noscript>
+    Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a>
+  </noscript>
+
+  {/block:Permalink}
+
+  <script>
+  var disqus_shortname = '{text:Disqus Shortname}';
+
+  (function () {
+    var s = document.createElement('script'); 
+        s.async = true;
+        s.src = 'http://disqus.com/forums/{text:Disqus Shortname}/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+
+  {/block:IfDisqusShortname}
+</div> <!-- end container-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/763bc92f.main.js"></script>
+<script src="http://8eb3f994ab118b66fe27-58c55b643a512434f9030a15d2cfffc4.r44.cf1.rackcdn.com/312cf641.bootstrap.js"></script>
+<script>
+      var submit = function(){
+          document.getElementById('searchForm').submit();    
+      }
+        
+      $(function() {
+        new Tumblr.RecentPosts($(".mm-recent-posts .panel-body"), 5).render()
+      });
+</script>
+</body>
+</html>
